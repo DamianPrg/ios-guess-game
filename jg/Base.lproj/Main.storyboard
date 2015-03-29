@@ -181,15 +181,6 @@
                                     <action selector="numberSelected:forEvent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7TE-gZ-G1p"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-zE-Qpr">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="0.43077256940000003" green="0.43077256940000003" blue="0.43077256940000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="56" width="400" height="75"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRADE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-LS-oSF">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -202,8 +193,20 @@
                                     <rect key="frame" x="-59" y="116" width="395" height="75"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsD-X7-uZv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="TRY AGAIN">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="220" width="80" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IFl-q3-25J"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ZzD-cl-hIl"/>
@@ -216,8 +219,8 @@
                                 <exclude reference="WPU-RW-3aH"/>
                                 <exclude reference="ZEV-gp-eRp"/>
                                 <exclude reference="Ihi-xZ-RZZ"/>
-                                <exclude reference="lIZ-zE-Qpr"/>
                                 <exclude reference="KhI-LS-oSF"/>
+                                <exclude reference="JsD-X7-uZv"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -232,19 +235,42 @@
                                 <include reference="WPU-RW-3aH"/>
                                 <include reference="ZEV-gp-eRp"/>
                                 <include reference="Ihi-xZ-RZZ"/>
-                                <include reference="lIZ-zE-Qpr"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="KhI-LS-oSF"/>
+                                <include reference="JsD-X7-uZv"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="button1" destination="zOF-9k-AF7" id="MTI-Mn-MHT"/>
+                        <outlet property="button2" destination="FZo-VM-alS" id="8ED-f7-15y"/>
+                        <outlet property="button3" destination="I8y-DU-OJe" id="NP1-Cm-io7"/>
+                        <outlet property="button4" destination="ZEJ-aq-Cvp" id="o4A-Jp-3wP"/>
+                        <outlet property="button6" destination="L68-sk-Kcm" id="Ybq-2F-chV"/>
+                        <outlet property="button7" destination="WPU-RW-3aH" id="6Np-SN-qUr"/>
+                        <outlet property="button8" destination="ZEV-gp-eRp" id="fxo-w2-aAN"/>
+                        <outlet property="button9" destination="Ihi-xZ-RZZ" id="pdK-nk-jdG"/>
                         <outlet property="buttonGroup" destination="ZEJ-aq-Cvp" id="kg9-kV-UZE"/>
+                        <outlet property="buttonLink" destination="Ihi-xZ-RZZ" id="pAF-uJ-RFd"/>
                         <outlet property="gradeLabel" destination="KhI-LS-oSF" id="9qk-aW-d0c"/>
+                        <outlet property="infoL" destination="ZzD-cl-hIl" id="iLO-MG-9CR"/>
                         <outlet property="infoLabel" destination="ZzD-cl-hIl" id="5xN-aj-vOv"/>
+                        <outlet property="startButton" destination="JsD-X7-uZv" id="Aei-aC-n1R"/>
+                        <outlet property="tryAgainButton" destination="JsD-X7-uZv" id="znU-ff-wrg"/>
+                        <outletCollection property="buttonNumbers" destination="ZEJ-aq-Cvp" id="qTu-pO-UqC"/>
+                        <outletCollection property="buttons" destination="YnC-br-EIz" id="z5p-93-ejh"/>
+                        <outletCollection property="buttons" destination="zOF-9k-AF7" id="bAk-64-Om9"/>
+                        <outletCollection property="buttons" destination="FZo-VM-alS" id="niz-Ez-UgQ"/>
+                        <outletCollection property="buttons" destination="I8y-DU-OJe" id="rOz-g9-ynt"/>
+                        <outletCollection property="buttons" destination="ZEJ-aq-Cvp" id="bgM-NL-wlf"/>
+                        <outletCollection property="buttons" destination="YnC-br-EIz" id="PIq-RD-2mh"/>
+                        <outletCollection property="buttons" destination="L68-sk-Kcm" id="wqd-xI-DmU"/>
+                        <outletCollection property="buttons" destination="WPU-RW-3aH" id="Hdz-PB-xZ7"/>
+                        <outletCollection property="buttons" destination="ZEV-gp-eRp" id="KS7-es-iM6"/>
+                        <outletCollection property="buttons" destination="Ihi-xZ-RZZ" id="UxH-ta-BVs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
